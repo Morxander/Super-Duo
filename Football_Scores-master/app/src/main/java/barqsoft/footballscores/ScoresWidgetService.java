@@ -86,9 +86,9 @@ public class ScoresWidgetService extends IntentService {
             // Close the connection
             scoresData.close();
             // Update the widget views
-            views.setImageViewResource(R.id.home_icon, Utilies.getTeamCrestByTeamName(match_home));
+            views.setImageViewResource(R.id.home_icon, Utilies.getTeamCrestByTeamName(match_home,getBaseContext()));
             views.setViewVisibility(R.id.home_icon, View.VISIBLE);
-            views.setImageViewResource(R.id.away_icon, Utilies.getTeamCrestByTeamName(match_away));
+            views.setImageViewResource(R.id.away_icon, Utilies.getTeamCrestByTeamName(match_away,getBaseContext()));
             views.setViewVisibility(R.id.away_icon, View.VISIBLE);
             views.setTextViewText(R.id.home_name, match_home);
             views.setTextViewText(R.id.away_name, match_away);
